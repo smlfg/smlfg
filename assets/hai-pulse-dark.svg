@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="400" viewBox="0 0 1000 400" role="img" aria-labelledby="title description">
+  <title id="title">Samuel Fleig — HAI public build pulse</title>
+  <desc id="description">Public GitHub metrics and the Human-Agent Interface control loop.</desc>
+  <style>
+    .eyebrow { fill: #3fb950; font: 600 13px ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: 1.8px; }
+    .title { fill: #f0f6fc; font: 700 34px ui-sans-serif, system-ui, sans-serif; letter-spacing: -0.8px; }
+    .subtitle { fill: #8b949e; font: 400 16px ui-sans-serif, system-ui, sans-serif; }
+    .number { fill: #f0f6fc; font: 700 38px ui-monospace, SFMono-Regular, Menlo, monospace; }
+    .label { fill: #8b949e; font: 600 11px ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: 0.9px; }
+    .stage { fill: #161b22; stroke: #30363d; stroke-width: 1; }
+    .stageText { fill: #f0f6fc; font: 600 11px ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: 0.6px; }
+    .connector { stroke: #1f6f3a; stroke-width: 2; }
+  </style>
+  <rect width="1000" height="400" rx="14" fill="#0d1117"/>
+  <rect x="0.5" y="0.5" width="999" height="399" rx="13.5" fill="none" stroke="#30363d"/>
+  <circle cx="72" cy="59" r="5" fill="#3fb950"/>
+  <text x="88" y="64" class="eyebrow">SAMUEL FLEIG / HUMAN-AGENT INTERFACE</text>
+  <text x="72" y="118" class="title">PUBLIC BUILD PULSE</text>
+  <text x="72" y="148" class="subtitle">Human control loops for reliable agent work</text>
+  <text x="928" y="64" text-anchor="end" class="label">UPDATED 2026-07-19</text>
+  <line x1="72" y1="181" x2="928" y2="181" stroke="#30363d"/>
+  <text x="72" y="225" class="number">—</text>
+        <text x="72" y="254" class="label">PUBLIC REPOSITORIES</text>
+<text x="350" y="225" class="number">—</text>
+        <text x="350" y="254" class="label">PUBLIC EVENTS / 30D</text>
+<text x="628" y="225" class="number">—</text>
+        <text x="628" y="254" class="label">PUBLIC STARS</text>
+  <line x1="72" y1="283" x2="928" y2="283" stroke="#30363d"/>
+  <line x1="198" y1="328" x2="237" y2="328" class="connector"/>
+  <line x1="363" y1="328" x2="402" y2="328" class="connector"/>
+  <line x1="528" y1="328" x2="567" y2="328" class="connector"/>
+  <line x1="693" y1="328" x2="732" y2="328" class="connector"/>
+  <rect x="72" y="311" width="126" height="34" rx="17" class="stage"/>
+        <text x="135" y="333" text-anchor="middle" class="stageText">INTENT</text>
+<rect x="237" y="311" width="126" height="34" rx="17" class="stage"/>
+        <text x="300" y="333" text-anchor="middle" class="stageText">CONTEXT</text>
+<rect x="402" y="311" width="126" height="34" rx="17" class="stage"/>
+        <text x="465" y="333" text-anchor="middle" class="stageText">SCOPE</text>
+<rect x="567" y="311" width="126" height="34" rx="17" class="stage"/>
+        <text x="630" y="333" text-anchor="middle" class="stageText">VERIFY</text>
+<rect x="732" y="311" width="126" height="34" rx="17" class="stage"/>
+        <text x="795" y="333" text-anchor="middle" class="stageText">OWNER</text>
+  <text x="928" y="374" text-anchor="end" class="label">PUBLIC GITHUB SIGNALS ONLY</text>
+</svg>
