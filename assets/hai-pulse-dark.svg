@@ -1,44 +1,40 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="400" viewBox="0 0 1000 400" role="img" aria-labelledby="title description">
-  <title id="title">Samuel Fleig — HAI public build pulse</title>
-  <desc id="description">Public GitHub metrics and the Human-Agent Interface control loop.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="985" height="530" viewBox="0 0 985 530" role="img" aria-labelledby="title description">
+  <title id="title">Samuel Fleig — Human-Agent Interface profile</title>
+  <desc id="description">A terminal profile for Samuel Fleig and Human-Agent Interface.</desc>
   <style>
-    .eyebrow { fill: #3fb950; font: 600 13px ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: 1.8px; }
-    .title { fill: #f0f6fc; font: 700 34px ui-sans-serif, system-ui, sans-serif; letter-spacing: -0.8px; }
-    .subtitle { fill: #8b949e; font: 400 16px ui-sans-serif, system-ui, sans-serif; }
-    .number { fill: #f0f6fc; font: 700 38px ui-monospace, SFMono-Regular, Menlo, monospace; }
-    .label { fill: #8b949e; font: 600 11px ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: 0.9px; }
-    .stage { fill: #161b22; stroke: #30363d; stroke-width: 1; }
-    .stageText { fill: #f0f6fc; font: 600 11px ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: 0.6px; }
-    .connector { stroke: #1f6f3a; stroke-width: 2; }
+    text, tspan { white-space: pre; }
+    .ascii { fill: #3fb950; font: 16px Consolas, "Courier New", monospace; }
+    .text { fill: #c9d1d9; font: 16px Consolas, "Courier New", monospace; }
+    .muted { fill: #8b949e; font: 16px Consolas, "Courier New", monospace; }
+    .key { fill: #ffa657; font: 16px Consolas, "Courier New", monospace; }
+    .value { fill: #a5d6ff; font: 16px Consolas, "Courier New", monospace; }
   </style>
-  <rect width="1000" height="400" rx="14" fill="#0d1117"/>
-  <rect x="0.5" y="0.5" width="999" height="399" rx="13.5" fill="none" stroke="#30363d"/>
-  <circle cx="72" cy="59" r="5" fill="#3fb950"/>
-  <text x="88" y="64" class="eyebrow">SAMUEL FLEIG / HUMAN-AGENT INTERFACE</text>
-  <text x="72" y="118" class="title">PUBLIC BUILD PULSE</text>
-  <text x="72" y="148" class="subtitle">Human control loops for reliable agent work</text>
-  <text x="928" y="64" text-anchor="end" class="label">UPDATED 2026-07-19</text>
-  <line x1="72" y1="181" x2="928" y2="181" stroke="#30363d"/>
-  <text x="72" y="225" class="number">—</text>
-        <text x="72" y="254" class="label">PUBLIC REPOSITORIES</text>
-<text x="350" y="225" class="number">—</text>
-        <text x="350" y="254" class="label">PUBLIC EVENTS / 30D</text>
-<text x="628" y="225" class="number">—</text>
-        <text x="628" y="254" class="label">PUBLIC STARS</text>
-  <line x1="72" y1="283" x2="928" y2="283" stroke="#30363d"/>
-  <line x1="198" y1="328" x2="237" y2="328" class="connector"/>
-  <line x1="363" y1="328" x2="402" y2="328" class="connector"/>
-  <line x1="528" y1="328" x2="567" y2="328" class="connector"/>
-  <line x1="693" y1="328" x2="732" y2="328" class="connector"/>
-  <rect x="72" y="311" width="126" height="34" rx="17" class="stage"/>
-        <text x="135" y="333" text-anchor="middle" class="stageText">INTENT</text>
-<rect x="237" y="311" width="126" height="34" rx="17" class="stage"/>
-        <text x="300" y="333" text-anchor="middle" class="stageText">CONTEXT</text>
-<rect x="402" y="311" width="126" height="34" rx="17" class="stage"/>
-        <text x="465" y="333" text-anchor="middle" class="stageText">SCOPE</text>
-<rect x="567" y="311" width="126" height="34" rx="17" class="stage"/>
-        <text x="630" y="333" text-anchor="middle" class="stageText">VERIFY</text>
-<rect x="732" y="311" width="126" height="34" rx="17" class="stage"/>
-        <text x="795" y="333" text-anchor="middle" class="stageText">OWNER</text>
-  <text x="928" y="374" text-anchor="end" class="label">PUBLIC GITHUB SIGNALS ONLY</text>
+  <rect width="985" height="530" rx="15" fill="#161b22"/>
+  <rect x="0.5" y="0.5" width="984" height="529" rx="14.5" fill="none" stroke="#30363d"/>
+  <text x="18" y="30" class="ascii"><tspan x="18" y="30">     _   _    _    ___ </tspan>
+<tspan x="18" y="50">    | | | |  / \  |_ _|</tspan>
+<tspan x="18" y="70">    | |_| | / _ \  | | </tspan>
+<tspan x="18" y="90">    |  _  |/ ___ \ | | </tspan>
+<tspan x="18" y="110">    |_| |_/_/   \_\___|</tspan>
+<tspan x="18" y="130"></tspan>
+<tspan x="18" y="150">       .------------.</tspan>
+<tspan x="18" y="170">       |    HUMAN   |</tspan>
+<tspan x="18" y="190">       '-----+------'</tspan>
+<tspan x="18" y="210">             |</tspan>
+<tspan x="18" y="230">       .-----v------.</tspan>
+<tspan x="18" y="250">       |   CONTEXT  |</tspan>
+<tspan x="18" y="270">       '-----+------'</tspan>
+<tspan x="18" y="290">             |</tspan>
+<tspan x="18" y="310">       .-----v------.</tspan>
+<tspan x="18" y="330">       |    AGENT   |</tspan>
+<tspan x="18" y="350">       '-----+------'</tspan>
+<tspan x="18" y="370">             |</tspan>
+<tspan x="18" y="390">       .-----v------.</tspan>
+<tspan x="18" y="410">       |    PROOF   |</tspan>
+<tspan x="18" y="430">       '-----+------'</tspan>
+<tspan x="18" y="450">             |</tspan>
+<tspan x="18" y="470">       .-----v------.</tspan>
+<tspan x="18" y="490">       |    OWNER   |</tspan>
+<tspan x="18" y="510">       '------------'</tspan></text>
+  <text x="390" y="30" class="text">samuel@fleig  ───────────────────────────────────────────</text><text x="390" y="50"><tspan class="muted">. </tspan><tspan class="key">Role</tspan><tspan class="muted">: ....................... </tspan><tspan class="value">AI Engineering student</tspan></text><text x="390" y="70"><tspan class="muted">. </tspan><tspan class="key">Site</tspan><tspan class="muted">: .................... </tspan><tspan class="value">human-agent-interface.com</tspan></text><text x="390" y="90"><tspan class="muted">. </tspan><tspan class="key">Focus</tspan><tspan class="muted">: ............. </tspan><tspan class="value">human-agent workflow acceptance</tspan></text><text x="390" y="110"><tspan class="muted">. </tspan><tspan class="key">Environment</tspan><tspan class="muted">: ...................... </tspan><tspan class="value">Pop!_OS / COSMIC</tspan></text><text x="390" y="150"><tspan class="muted">. </tspan><tspan class="key">Agents.Primary</tspan><tspan class="muted">: .............. </tspan><tspan class="value">Codex, Claude, Hermes</tspan></text><text x="390" y="170"><tspan class="muted">. </tspan><tspan class="key">Context</tspan><tspan class="muted">: ......... </tspan><tspan class="value">routing, memory, knowledge graphs</tspan></text><text x="390" y="190"><tspan class="muted">. </tspan><tspan class="key">Method</tspan><tspan class="muted">: ............ </tspan><tspan class="value">failure -> contract -> evidence</tspan></text><text x="390" y="210"><tspan class="muted">. </tspan><tspan class="key">Thesis</tspan><tspan class="muted">: ......... </tspan><tspan class="value">human authority, machine execution</tspan></text><text x="390" y="250" class="text">- GitHub Signals ─────────────────────────────────────────</text><text x="390" y="270"><tspan class="muted">. </tspan><tspan class="key">Public Repositories</tspan><tspan class="muted">: ............................. </tspan><tspan class="value">—</tspan></text><text x="390" y="290"><tspan class="muted">. </tspan><tspan class="key">Public Events / 30d</tspan><tspan class="muted">: ............................. </tspan><tspan class="value">—</tspan></text><text x="390" y="310"><tspan class="muted">. </tspan><tspan class="key">Public Stars</tspan><tspan class="muted">: .................................... </tspan><tspan class="value">—</tspan></text><text x="390" y="330"><tspan class="muted">. </tspan><tspan class="key">Generated</tspan><tspan class="muted">: .............................. </tspan><tspan class="value">2026-07-19</tspan></text>
 </svg>

@@ -1,14 +1,16 @@
 <div align="center">
-  <picture>
-    <source
-      media="(prefers-color-scheme: dark)"
-      srcset="https://raw.githubusercontent.com/smlfg/smlfg/main/assets/hai-pulse-dark.svg"
-    >
-    <img
-      alt="Samuel Fleig — Human-Agent Interface public build pulse"
-      src="https://raw.githubusercontent.com/smlfg/smlfg/main/assets/hai-pulse-light.svg"
-    >
-  </picture>
+  <a href="https://www.human-agent-interface.com">
+    <picture>
+      <source
+        media="(prefers-color-scheme: dark)"
+        srcset="https://raw.githubusercontent.com/smlfg/smlfg/main/assets/hai-pulse-dark.svg"
+      >
+      <img
+        alt="Samuel Fleig — Human-Agent Interface profile"
+        src="https://raw.githubusercontent.com/smlfg/smlfg/main/assets/hai-pulse-light.svg"
+      >
+    </picture>
+  </a>
 
   <h1>Samuel Fleig</h1>
 

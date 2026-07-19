@@ -73,76 +73,113 @@ def public_metrics() -> dict[str, str]:
     return metrics
 
 
+def dotted_line(label: str, value: str, width: int = 49) -> tuple[str, str, str]:
+    dots = "." * max(2, width - len(label) - len(value))
+    return label, dots, value
+
+
 def svg(theme: str, metrics: dict[str, str]) -> str:
     palette = {
         "dark": {
-            "background": "#0d1117",
-            "panel": "#161b22",
+            "background": "#161b22",
             "border": "#30363d",
-            "text": "#f0f6fc",
+            "text": "#c9d1d9",
             "muted": "#8b949e",
+            "key": "#ffa657",
+            "value": "#a5d6ff",
             "accent": "#3fb950",
-            "accent_soft": "#1f6f3a",
         },
         "light": {
             "background": "#ffffff",
-            "panel": "#f6f8fa",
             "border": "#d0d7de",
             "text": "#24292f",
             "muted": "#57606a",
+            "key": "#9a6700",
+            "value": "#0969da",
             "accent": "#1a7f37",
-            "accent_soft": "#b6e3c6",
         },
     }[theme]
 
-    stat_x = (72, 350, 628)
-    stats = (
-        (metrics["repositories"], "PUBLIC REPOSITORIES"),
-        (metrics["recent_events"], "PUBLIC EVENTS / 30D"),
-        (metrics["stars"], "PUBLIC STARS"),
+    control_loop = (
+        "     _   _    _    ___ ",
+        "    | | | |  / \\  |_ _|",
+        "    | |_| | / _ \\  | | ",
+        "    |  _  |/ ___ \\ | | ",
+        "    |_| |_/_/   \\_\\___|",
+        "",
+        "       .------------.",
+        "       |    HUMAN   |",
+        "       '-----+------'",
+        "             |",
+        "       .-----v------.",
+        "       |   CONTEXT  |",
+        "       '-----+------'",
+        "             |",
+        "       .-----v------.",
+        "       |    AGENT   |",
+        "       '-----+------'",
+        "             |",
+        "       .-----v------.",
+        "       |    PROOF   |",
+        "       '-----+------'",
+        "             |",
+        "       .-----v------.",
+        "       |    OWNER   |",
+        "       '------------'",
     )
-    stat_markup = "\n".join(
-        f'''<text x="{x}" y="225" class="number">{value}</text>
-        <text x="{x}" y="254" class="label">{label}</text>'''
-        for x, (value, label) in zip(stat_x, stats, strict=True)
+    diagram_markup = "\n".join(
+        f'<tspan x="18" y="{30 + index * 20}">{line}</tspan>'
+        for index, line in enumerate(control_loop)
     )
 
-    stages = ("INTENT", "CONTEXT", "SCOPE", "VERIFY", "OWNER")
-    stage_markup = "\n".join(
-        f'''<rect x="{72 + index * 165}" y="311" width="126" height="34" rx="17" class="stage"/>
-        <text x="{135 + index * 165}" y="333" text-anchor="middle" class="stageText">{stage}</text>'''
-        for index, stage in enumerate(stages)
+    profile_lines = (
+        ("header", "samuel@fleig  ───────────────────────────────────────────"),
+        ("line", dotted_line("Role", "AI Engineering student")),
+        ("line", dotted_line("Site", "human-agent-interface.com")),
+        ("line", dotted_line("Focus", "human-agent workflow acceptance")),
+        ("line", dotted_line("Environment", "Pop!_OS / COSMIC")),
+        ("blank", ""),
+        ("line", dotted_line("Agents.Primary", "Codex, Claude, Hermes")),
+        ("line", dotted_line("Context", "routing, memory, knowledge graphs")),
+        ("line", dotted_line("Method", "failure -> contract -> evidence")),
+        ("line", dotted_line("Thesis", "human authority, machine execution")),
+        ("blank", ""),
+        ("header", "- GitHub Signals ─────────────────────────────────────────"),
+        ("line", dotted_line("Public Repositories", metrics["repositories"])),
+        ("line", dotted_line("Public Events / 30d", metrics["recent_events"])),
+        ("line", dotted_line("Public Stars", metrics["stars"])),
+        ("line", dotted_line("Generated", metrics["updated"])),
     )
+    profile_markup: list[str] = []
+    y = 30
+    for kind, content in profile_lines:
+        if kind == "header":
+            profile_markup.append(f'<text x="390" y="{y}" class="text">{content}</text>')
+        elif kind == "line":
+            label, dots, value = content
+            profile_markup.append(
+                f'<text x="390" y="{y}"><tspan class="muted">. </tspan>'
+                f'<tspan class="key">{label}</tspan>'
+                f'<tspan class="muted">: {dots} </tspan>'
+                f'<tspan class="value">{value}</tspan></text>'
+            )
+        y += 20
 
-    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="400" viewBox="0 0 1000 400" role="img" aria-labelledby="title description">
-  <title id="title">Samuel Fleig — HAI public build pulse</title>
-  <desc id="description">Public GitHub metrics and the Human-Agent Interface control loop.</desc>
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="985" height="530" viewBox="0 0 985 530" role="img" aria-labelledby="title description">
+  <title id="title">Samuel Fleig — Human-Agent Interface profile</title>
+  <desc id="description">A terminal profile for Samuel Fleig and Human-Agent Interface.</desc>
   <style>
-    .eyebrow {{ fill: {palette["accent"]}; font: 600 13px ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: 1.8px; }}
-    .title {{ fill: {palette["text"]}; font: 700 34px ui-sans-serif, system-ui, sans-serif; letter-spacing: -0.8px; }}
-    .subtitle {{ fill: {palette["muted"]}; font: 400 16px ui-sans-serif, system-ui, sans-serif; }}
-    .number {{ fill: {palette["text"]}; font: 700 38px ui-monospace, SFMono-Regular, Menlo, monospace; }}
-    .label {{ fill: {palette["muted"]}; font: 600 11px ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: 0.9px; }}
-    .stage {{ fill: {palette["panel"]}; stroke: {palette["border"]}; stroke-width: 1; }}
-    .stageText {{ fill: {palette["text"]}; font: 600 11px ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: 0.6px; }}
-    .connector {{ stroke: {palette["accent_soft"]}; stroke-width: 2; }}
+    text, tspan {{ white-space: pre; }}
+    .ascii {{ fill: {palette["accent"]}; font: 16px Consolas, "Courier New", monospace; }}
+    .text {{ fill: {palette["text"]}; font: 16px Consolas, "Courier New", monospace; }}
+    .muted {{ fill: {palette["muted"]}; font: 16px Consolas, "Courier New", monospace; }}
+    .key {{ fill: {palette["key"]}; font: 16px Consolas, "Courier New", monospace; }}
+    .value {{ fill: {palette["value"]}; font: 16px Consolas, "Courier New", monospace; }}
   </style>
-  <rect width="1000" height="400" rx="14" fill="{palette["background"]}"/>
-  <rect x="0.5" y="0.5" width="999" height="399" rx="13.5" fill="none" stroke="{palette["border"]}"/>
-  <circle cx="72" cy="59" r="5" fill="{palette["accent"]}"/>
-  <text x="88" y="64" class="eyebrow">SAMUEL FLEIG / HUMAN-AGENT INTERFACE</text>
-  <text x="72" y="118" class="title">PUBLIC BUILD PULSE</text>
-  <text x="72" y="148" class="subtitle">Human control loops for reliable agent work</text>
-  <text x="928" y="64" text-anchor="end" class="label">UPDATED {metrics["updated"]}</text>
-  <line x1="72" y1="181" x2="928" y2="181" stroke="{palette["border"]}"/>
-  {stat_markup}
-  <line x1="72" y1="283" x2="928" y2="283" stroke="{palette["border"]}"/>
-  <line x1="198" y1="328" x2="237" y2="328" class="connector"/>
-  <line x1="363" y1="328" x2="402" y2="328" class="connector"/>
-  <line x1="528" y1="328" x2="567" y2="328" class="connector"/>
-  <line x1="693" y1="328" x2="732" y2="328" class="connector"/>
-  {stage_markup}
-  <text x="928" y="374" text-anchor="end" class="label">PUBLIC GITHUB SIGNALS ONLY</text>
+  <rect width="985" height="530" rx="15" fill="{palette["background"]}"/>
+  <rect x="0.5" y="0.5" width="984" height="529" rx="14.5" fill="none" stroke="{palette["border"]}"/>
+  <text x="18" y="30" class="ascii">{diagram_markup}</text>
+  {"".join(profile_markup)}
 </svg>
 '''
 
