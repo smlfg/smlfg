@@ -116,7 +116,7 @@ def svg(theme: str, metrics: dict[str, str]) -> str:
         },
     }[theme]
 
-    control_loop = (
+    _original_control_loop = (
         "     _   _    _    ___ ",
         "    | | | |  / \\  |_ _|",
         "    | |_| | / _ \\  | | ",
@@ -143,6 +143,33 @@ def svg(theme: str, metrics: dict[str, str]) -> str:
         "       |    OWNER   |",
         "       '------------'",
     )
+    # Concrete V1.6 execution example; the earlier block remains only as
+    # source history for the original HAI mark.
+    control_loop = (
+        "       HAI / V1.6",
+        "  $ hai loop --example",
+        "",
+        "        [ human ]",
+        "  accepts NEXT_STEP.md",
+        "             |",
+        "             v",
+        "     [ hai-executer ]",
+        "   allowed changes only",
+        "             |",
+        "             v",
+        "     [ hai-validator ]",
+        "      verdict: ACCEPT?",
+        "        +---+---+",
+        "       yes      no",
+        "        |        |",
+        "        v        v",
+        "  [ human gate ] repair route",
+        "   commit / push      |",
+        "        |             +----> executer",
+        "        v",
+        " [ proof: report + result ]",
+    )
+
     diagram_markup = "\n".join(
         f'<tspan x="18" y="{30 + index * 20}">{line}</tspan>'
         for index, line in enumerate(control_loop)

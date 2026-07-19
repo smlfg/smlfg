@@ -11,30 +11,27 @@
   </style>
   <rect width="985" height="530" rx="15" fill="#161b22"/>
   <rect x="0.5" y="0.5" width="984" height="529" rx="14.5" fill="none" stroke="#30363d"/>
-  <text x="18" y="30" class="ascii"><tspan x="18" y="30">     _   _    _    ___ </tspan>
-<tspan x="18" y="50">    | | | |  / \  |_ _|</tspan>
-<tspan x="18" y="70">    | |_| | / _ \  | | </tspan>
-<tspan x="18" y="90">    |  _  |/ ___ \ | | </tspan>
-<tspan x="18" y="110">    |_| |_/_/   \_\___|</tspan>
-<tspan x="18" y="130"></tspan>
-<tspan x="18" y="150">       .------------.</tspan>
-<tspan x="18" y="170">       |    HUMAN   |</tspan>
-<tspan x="18" y="190">       '-----+------'</tspan>
+  <text x="18" y="30" class="ascii"><tspan x="18" y="30">       HAI / V1.6</tspan>
+<tspan x="18" y="50">  $ hai loop --example</tspan>
+<tspan x="18" y="70"></tspan>
+<tspan x="18" y="90">        [ human ]</tspan>
+<tspan x="18" y="110">  accepts NEXT_STEP.md</tspan>
+<tspan x="18" y="130">             |</tspan>
+<tspan x="18" y="150">             v</tspan>
+<tspan x="18" y="170">     [ hai-executer ]</tspan>
+<tspan x="18" y="190">   allowed changes only</tspan>
 <tspan x="18" y="210">             |</tspan>
-<tspan x="18" y="230">       .-----v------.</tspan>
-<tspan x="18" y="250">       |   CONTEXT  |</tspan>
-<tspan x="18" y="270">       '-----+------'</tspan>
-<tspan x="18" y="290">             |</tspan>
-<tspan x="18" y="310">       .-----v------.</tspan>
-<tspan x="18" y="330">       |    AGENT   |</tspan>
-<tspan x="18" y="350">       '-----+------'</tspan>
-<tspan x="18" y="370">             |</tspan>
-<tspan x="18" y="390">       .-----v------.</tspan>
-<tspan x="18" y="410">       |    PROOF   |</tspan>
-<tspan x="18" y="430">       '-----+------'</tspan>
-<tspan x="18" y="450">             |</tspan>
-<tspan x="18" y="470">       .-----v------.</tspan>
-<tspan x="18" y="490">       |    OWNER   |</tspan>
-<tspan x="18" y="510">       '------------'</tspan></text>
+<tspan x="18" y="230">             v</tspan>
+<tspan x="18" y="250">     [ hai-validator ]</tspan>
+<tspan x="18" y="270">      verdict: ACCEPT?</tspan>
+<tspan x="18" y="290">        +---+---+</tspan>
+<tspan x="18" y="310">       yes      no</tspan>
+<tspan x="18" y="330">        |        |</tspan>
+<tspan x="18" y="350">        v        v</tspan>
+<tspan x="18" y="370">  [ human gate ] repair route</tspan>
+<tspan x="18" y="390">   commit / push      |</tspan>
+<tspan x="18" y="410">        |             +----> executer</tspan>
+<tspan x="18" y="430">        v</tspan>
+<tspan x="18" y="450"> [ proof: report + result ]</tspan></text>
   <text x="390" y="30" class="text">samuel@fleig  ───────────────────────────────────────────</text><text x="390" y="50" class="muted">. </text><text x="410" y="50" class="key">Role</text><text x="448.4" y="50" class="muted">: ................. </text><text x="640" y="50" class="value">AI Engineering student</text><text x="390" y="70" class="muted">. </text><text x="410" y="70" class="key">Work</text><text x="448.4" y="70" class="muted">: ................. </text><text x="640" y="70" class="value">AIDVANCE, Berlin (Working Student)</text><text x="390" y="90" class="muted">. </text><text x="410" y="90" class="key">Title</text><text x="458.0" y="90" class="muted">: ................ </text><text x="640" y="90" class="value">AI Operations &amp; Agent Enablement</text><text x="390" y="110" class="muted">. </text><text x="410" y="110" class="key">Site</text><text x="448.4" y="110" class="muted">: ................. </text><text x="640" y="110" class="value">human-agent-interface.com</text><text x="390" y="130" class="muted">. </text><text x="410" y="130" class="key">Focus</text><text x="458.0" y="130" class="muted">: ................ </text><text x="640" y="130" class="value">human-agent workflow acceptance</text><text x="390" y="150" class="muted">. </text><text x="410" y="150" class="key">Environment</text><text x="515.6" y="150" class="muted">: .......... </text><text x="640" y="150" class="value">Pop!_OS / COSMIC</text><text x="390" y="190" class="muted">. </text><text x="410" y="190" class="key">Agents.Primary</text><text x="544.4" y="190" class="muted">: ....... </text><text x="640" y="190" class="value">Codex, Claude, Hermes</text><text x="390" y="210" class="muted">. </text><text x="410" y="210" class="key">Context</text><text x="477.2" y="210" class="muted">: .............. </text><text x="640" y="210" class="value">routing, memory, knowledge graphs</text><text x="390" y="230" class="muted">. </text><text x="410" y="230" class="key">Method</text><text x="467.6" y="230" class="muted">: ............... </text><text x="640" y="230" class="value">failure -&gt; contract -&gt; evidence</text><text x="390" y="250" class="muted">. </text><text x="410" y="250" class="key">Thesis</text><text x="467.6" y="250" class="muted">: ............... </text><text x="640" y="250" class="value">human authority, machine execution</text><text x="390" y="290" class="text">- GitHub Signals ─────────────────────────────────────────</text><text x="390" y="310" class="muted">. </text><text x="410" y="310" class="key">Public Repositories</text><text x="592.4" y="310" class="muted">: .. </text><text x="640" y="310" class="value">—</text><text x="390" y="330" class="muted">. </text><text x="410" y="330" class="key">Public Events / 30d</text><text x="592.4" y="330" class="muted">: .. </text><text x="640" y="330" class="value">—</text><text x="390" y="350" class="muted">. </text><text x="410" y="350" class="key">Public Stars</text><text x="525.2" y="350" class="muted">: ......... </text><text x="640" y="350" class="value">—</text><text x="390" y="370" class="muted">. </text><text x="410" y="370" class="key">Generated</text><text x="496.4" y="370" class="muted">: ............ </text><text x="640" y="370" class="value">2026-07-19</text><text x="390" y="410" class="text">- Build Lineage ───────────────────────────────────────────</text><text x="390" y="430" class="muted">. </text><text x="410" y="430" class="key">2025.11 SelfAI</text><text x="544.4" y="430" class="muted">: ....... </text><text x="640" y="430" class="value">planner, tools, memory</text><text x="390" y="450" class="muted">. </text><text x="410" y="450" class="key">2026 Sidecar</text><text x="525.2" y="450" class="muted">: ......... </text><text x="640" y="450" class="value">activity -&gt; outcome proof</text><text x="390" y="470" class="muted">. </text><text x="410" y="470" class="key">2026 HAI</text><text x="486.8" y="470" class="muted">: ............. </text><text x="640" y="470" class="value">human contract, model-agnostic</text><text x="390" y="490" class="muted">. </text><text x="410" y="490" class="key">2026.07 Learning proof</text><text x="621.2" y="490" class="muted">: .. </text><text x="640" y="490" class="value">context -&gt; active human work</text>
 </svg>

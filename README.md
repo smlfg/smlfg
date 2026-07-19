@@ -3,11 +3,11 @@
     <picture>
       <source
         media="(prefers-color-scheme: dark)"
-        srcset="https://raw.githubusercontent.com/smlfg/smlfg/main/assets/hai-pulse-dark.svg?v=terminal-v3"
+        srcset="https://raw.githubusercontent.com/smlfg/smlfg/main/assets/hai-pulse-dark.svg?v=terminal-v4"
       >
       <img
         alt="Samuel Fleig — Human-Agent Interface profile"
-        src="https://raw.githubusercontent.com/smlfg/smlfg/main/assets/hai-pulse-light.svg?v=terminal-v3"
+        src="https://raw.githubusercontent.com/smlfg/smlfg/main/assets/hai-pulse-light.svg?v=terminal-v4"
       >
     </picture>
   </a>
@@ -127,11 +127,11 @@ runtime evidence, and an explicit statement of what was not verified.
 <picture>
   <source
     media="(prefers-color-scheme: dark)"
-    srcset="https://raw.githubusercontent.com/smlfg/smlfg/main/assets/hai-pulse-dark.svg?v=terminal-v3"
+    srcset="https://raw.githubusercontent.com/smlfg/smlfg/main/assets/hai-pulse-dark.svg?v=terminal-v4"
   >
   <img
     alt="Public HAI build metrics"
-    src="https://raw.githubusercontent.com/smlfg/smlfg/main/assets/hai-pulse-light.svg?v=terminal-v3"
+    src="https://raw.githubusercontent.com/smlfg/smlfg/main/assets/hai-pulse-light.svg?v=terminal-v4"
   >
 </picture>
 
