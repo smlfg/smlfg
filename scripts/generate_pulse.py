@@ -13,6 +13,7 @@ import urllib.error
 import urllib.request
 from datetime import UTC, datetime, timedelta
 from pathlib import Path
+from xml.sax.saxutils import escape
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -73,9 +74,24 @@ def public_metrics() -> dict[str, str]:
     return metrics
 
 
-def dotted_line(label: str, value: str, width: int = 49) -> tuple[str, str, str]:
-    dots = "." * max(2, width - len(label) - len(value))
-    return label, dots, value
+def terminal_line(y: int, label: str, value: str) -> str:
+    """Render one terminal property with explicit columns.
+
+    Explicit x positions keep the SVG readable in GitHub and simpler SVG
+    rasterizers; inline tspans are not consistently laid out everywhere.
+    """
+
+    label_x = 410
+    value_x = 640
+    character_width = 9.6
+    label_end = label_x + len(label) * character_width
+    dot_count = max(2, int((value_x - label_end) / character_width) - 2)
+    return (
+        f'<text x="390" y="{y}" class="muted">. </text>'
+        f'<text x="{label_x}" y="{y}" class="key">{escape(label)}</text>'
+        f'<text x="{label_end:.1f}" y="{y}" class="muted">: {"." * dot_count} </text>'
+        f'<text x="{value_x}" y="{y}" class="value">{escape(value)}</text>'
+    )
 
 
 def svg(theme: str, metrics: dict[str, str]) -> str:
@@ -134,21 +150,29 @@ def svg(theme: str, metrics: dict[str, str]) -> str:
 
     profile_lines = (
         ("header", "samuel@fleig  ───────────────────────────────────────────"),
-        ("line", dotted_line("Role", "AI Engineering student")),
-        ("line", dotted_line("Site", "human-agent-interface.com")),
-        ("line", dotted_line("Focus", "human-agent workflow acceptance")),
-        ("line", dotted_line("Environment", "Pop!_OS / COSMIC")),
+        ("line", ("Role", "AI Engineering student")),
+        ("line", ("Work", "AIDVANCE, Berlin (Working Student)")),
+        ("line", ("Title", "AI Operations & Agent Enablement")),
+        ("line", ("Site", "human-agent-interface.com")),
+        ("line", ("Focus", "human-agent workflow acceptance")),
+        ("line", ("Environment", "Pop!_OS / COSMIC")),
         ("blank", ""),
-        ("line", dotted_line("Agents.Primary", "Codex, Claude, Hermes")),
-        ("line", dotted_line("Context", "routing, memory, knowledge graphs")),
-        ("line", dotted_line("Method", "failure -> contract -> evidence")),
-        ("line", dotted_line("Thesis", "human authority, machine execution")),
+        ("line", ("Agents.Primary", "Codex, Claude, Hermes")),
+        ("line", ("Context", "routing, memory, knowledge graphs")),
+        ("line", ("Method", "failure -> contract -> evidence")),
+        ("line", ("Thesis", "human authority, machine execution")),
         ("blank", ""),
         ("header", "- GitHub Signals ─────────────────────────────────────────"),
-        ("line", dotted_line("Public Repositories", metrics["repositories"])),
-        ("line", dotted_line("Public Events / 30d", metrics["recent_events"])),
-        ("line", dotted_line("Public Stars", metrics["stars"])),
-        ("line", dotted_line("Generated", metrics["updated"])),
+        ("line", ("Public Repositories", metrics["repositories"])),
+        ("line", ("Public Events / 30d", metrics["recent_events"])),
+        ("line", ("Public Stars", metrics["stars"])),
+        ("line", ("Generated", metrics["updated"])),
+        ("blank", ""),
+        ("header", "- Build Lineage ───────────────────────────────────────────"),
+        ("milestone", ("2025.11", "SelfAI", "planner, tools, memory")),
+        ("milestone", ("2026", "Sidecar", "activity -> outcome proof")),
+        ("milestone", ("2026", "HAI", "human contract, model-agnostic")),
+        ("milestone", ("2026.07", "Learning proof", "context -> active human work")),
     )
     profile_markup: list[str] = []
     y = 30
@@ -156,13 +180,11 @@ def svg(theme: str, metrics: dict[str, str]) -> str:
         if kind == "header":
             profile_markup.append(f'<text x="390" y="{y}" class="text">{content}</text>')
         elif kind == "line":
-            label, dots, value = content
-            profile_markup.append(
-                f'<text x="390" y="{y}"><tspan class="muted">. </tspan>'
-                f'<tspan class="key">{label}</tspan>'
-                f'<tspan class="muted">: {dots} </tspan>'
-                f'<tspan class="value">{value}</tspan></text>'
-            )
+            label, value = content
+            profile_markup.append(terminal_line(y, label, value))
+        elif kind == "milestone":
+            year, project, evidence = content
+            profile_markup.append(terminal_line(y, f"{year} {project}", evidence))
         y += 20
 
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="985" height="530" viewBox="0 0 985 530" role="img" aria-labelledby="title description">

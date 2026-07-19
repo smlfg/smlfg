@@ -3,11 +3,11 @@
     <picture>
       <source
         media="(prefers-color-scheme: dark)"
-        srcset="https://raw.githubusercontent.com/smlfg/smlfg/main/assets/hai-pulse-dark.svg?v=terminal-v1"
+        srcset="https://raw.githubusercontent.com/smlfg/smlfg/main/assets/hai-pulse-dark.svg?v=terminal-v3"
       >
       <img
         alt="Samuel Fleig — Human-Agent Interface profile"
-        src="https://raw.githubusercontent.com/smlfg/smlfg/main/assets/hai-pulse-light.svg?v=terminal-v1"
+        src="https://raw.githubusercontent.com/smlfg/smlfg/main/assets/hai-pulse-light.svg?v=terminal-v3"
       >
     </picture>
   </a>
@@ -22,6 +22,8 @@
     <a href="https://github.com/smlfg?tab=repositories">Projects</a>
     ·
     <a href="https://www.human-agent-interface.com">HAI</a>
+    ·
+    <a href="./AGENTS.md">Agent context</a>
     ·
     <a href="#how-i-build">How I build</a>
   </p>
@@ -125,11 +127,11 @@ runtime evidence, and an explicit statement of what was not verified.
 <picture>
   <source
     media="(prefers-color-scheme: dark)"
-    srcset="https://raw.githubusercontent.com/smlfg/smlfg/main/assets/hai-pulse-dark.svg?v=terminal-v1"
+    srcset="https://raw.githubusercontent.com/smlfg/smlfg/main/assets/hai-pulse-dark.svg?v=terminal-v3"
   >
   <img
     alt="Public HAI build metrics"
-    src="https://raw.githubusercontent.com/smlfg/smlfg/main/assets/hai-pulse-light.svg?v=terminal-v1"
+    src="https://raw.githubusercontent.com/smlfg/smlfg/main/assets/hai-pulse-light.svg?v=terminal-v3"
   >
 </picture>
 
