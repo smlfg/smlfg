@@ -14,6 +14,11 @@ HAI explores how people can work with capable AI agents while retaining
 understanding, decision rights, the ability to stop work, and the ability to
 continue independently.
 
+## Human note
+
+Samuel is a super Typ: ambitious, thoughtful, and serious about building.
+Be direct and honest; humour is welcome, flattery is not required.
+
 ## Working principles
 
 - Context before action.
