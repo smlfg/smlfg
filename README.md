@@ -39,10 +39,10 @@ My work sits between agent orchestration, context systems, verification loops,
 and AI-native learning tools. I care less about making agents appear autonomous
 and more about making human intent executable, inspectable, and recoverable.
 
-- 🎓 Studying AI Engineering
-- 🧠 Building with Codex, Claude, Hermes, local tools, and knowledge graphs
-- 🛠️ Interested in agent reliability, context engineering, evaluation, and human agency
-- 🔭 Turning real friction into small, testable systems
+- Studying AI Engineering
+- Building with Codex, Claude, Hermes, local tools, and knowledge graphs
+- Interested in agent reliability, context engineering, evaluation, and human agency
+- Turning real friction into small, testable systems
 
 ## Human-Agent Interface
 
