@@ -141,8 +141,13 @@ Public GitHub signals only · generated daily from public API data · no private
 
 ## Domains
 
-- [human-agent-interface.com](https://www.human-agent-interface.com) — Human-Agent Interface (HAI)
-- [agentfähig.de](https://xn--agentfhig-02a.de) — agentfähig
+- [human-agent-interface.com](https://www.human-agent-interface.com) — main site and umbrella brand for HAI
+- [humanagentinterface.de](https://humanagentinterface.de) — German HAI domain
+- [humanagentcontrol.com](https://humanagentcontrol.com) — control and governance layer
+- [agent-human-interface.com](https://agent-human-interface.com) — the reverse direction: agent to human
+- agentcontrol.systems — technical control-plane / systems domain
+- [agentfähig.de](https://xn--agentfhig-02a.de) (also agentfaehig.de) — German entry point for companies
+- [samuelfleig.com](https://samuelfleig.com) — personal founder page
 
 ## Explore
 
