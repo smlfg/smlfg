@@ -139,9 +139,13 @@ runtime evidence, and an explicit statement of what was not verified.
 Public GitHub signals only · generated daily from public API data · no private activity or token data
 </sub>
 
+## Domains
+
+- [human-agent-interface.com](https://www.human-agent-interface.com) — Human-Agent Interface (HAI)
+- [agentfähig.de](https://xn--agentfhig-02a.de) — agentfähig
+
 ## Explore
 
-- Visit [human-agent-interface.com](https://www.human-agent-interface.com)
 - Browse my [public repositories](https://github.com/smlfg?tab=repositories)
 - Start with the projects pinned on my profile
 - Follow the artifacts: system design, source code, checks, and demos
