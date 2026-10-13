@@ -146,7 +146,7 @@ Public GitHub signals only · generated daily from public API data · no private
 - [humanagentcontrol.com](https://humanagentcontrol.com) — control and governance layer
 - [agent-human-interface.com](https://agent-human-interface.com) — the reverse direction: agent to human
 - [agentcontrol.systems](https://agentcontrol.systems) — technical control-plane / systems domain
-- [agentfähig.de](https://xn--agentfhig-02a.de) (also [agentfaehig.de](https://agentfaehig.de)) — German entry point for companies
+- [agentfähig.de](https://agentfähig.de) (also [agentfaehig.de](https://agentfaehig.de)) — German entry point for companies
 - [samuelfleig.com](https://samuelfleig.com) — personal founder page
 
 ## Explore
