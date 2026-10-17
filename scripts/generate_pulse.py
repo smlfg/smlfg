@@ -178,7 +178,7 @@ def svg(theme: str, metrics: dict[str, str]) -> str:
     profile_lines = (
         ("header", "samuel@fleig  ───────────────────────────────────────────"),
         ("line", ("Role", "AI Engineering student")),
-        ("line", ("Work", "AIDVANCE, Berlin (Working Student)")),
+        ("line", ("Location", "Heilbronn, Germany")),
         ("line", ("Title", "AI Operations & Agent Enablement")),
         ("line", ("Site", "human-agent-interface.com")),
         ("line", ("Focus", "human-agent workflow acceptance")),

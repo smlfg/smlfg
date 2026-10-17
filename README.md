@@ -1,3 +1,10 @@
+<a href="https://www.human-agent-interface.com">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/smlfg/smlfg/main/assets/hai-pulse-dark.svg?v=terminal-v5">
+    <img alt="Samuel Fleig, Human-Agent Interface profile" src="https://raw.githubusercontent.com/smlfg/smlfg/main/assets/hai-pulse-light.svg?v=terminal-v5">
+  </picture>
+</a>
+
 # Samuel Fleig
 
 AI Engineering student. I build Human-Agent Interfaces (HAI): systems that let
